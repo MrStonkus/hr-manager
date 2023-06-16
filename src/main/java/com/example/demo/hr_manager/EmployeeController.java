@@ -36,5 +36,4 @@ public class EmployeeController {
 	public void deleteEmployee(@PathVariable("employeeId") Long employee_id) {
 		employeeService.deleteEmployee(employee_id);
 	}
-
 }
