@@ -1,7 +1,19 @@
-package com.hr.manager;
+package com.example.demo.hr_manager;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
+import jakarta.persistence.Table;
+
+@Entity
+@Table
 public class Employee {
 
+	@Id
+	@SequenceGenerator(name = "employee_sequence", sequenceName = "employee_sequence", allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "employee_sequence")
 	private Long employee_id;
 	private String name;
 	private Long department_id;
