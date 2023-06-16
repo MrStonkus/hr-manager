@@ -16,8 +16,8 @@ public class Employee {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "employee_sequence")
 	private Long employee_id;
 	private String name;
-	private Long department_id;
-	private Long project_id;
+	private Integer department_id;
+	private Integer project_id;
 	private String role;
 	private Integer salary;
 
@@ -25,7 +25,8 @@ public class Employee {
 
 	}
 
-	public Employee(Long employee_id, String name, Long department_id, Long project_id, String role, Integer salary) {
+	public Employee(Long employee_id, String name, Integer department_id, Integer project_id, String role,
+			Integer salary) {
 		this.employee_id = employee_id;
 		this.name = name;
 		this.department_id = department_id;
@@ -34,7 +35,7 @@ public class Employee {
 		this.salary = salary;
 	}
 
-	public Employee(String name, Long department_id, Long project_id, String role, Integer salary) {
+	public Employee(String name, Integer department_id, Integer project_id, String role, Integer salary) {
 		this.name = name;
 		this.department_id = department_id;
 		this.project_id = project_id;
@@ -58,19 +59,19 @@ public class Employee {
 		this.name = name;
 	}
 
-	public Long getDepartment_id() {
+	public Integer getDepartment_id() {
 		return department_id;
 	}
 
-	public void setDepartment_id(Long department_id) {
+	public void setDepartment_id(Integer department_id) {
 		this.department_id = department_id;
 	}
 
-	public Long getProject_id() {
+	public Integer getProject_id() {
 		return project_id;
 	}
 
-	public void setProject_id(Long project_id) {
+	public void setProject_id(Integer project_id) {
 		this.project_id = project_id;
 	}
 
