@@ -20,7 +20,11 @@ public class EmployeeService {
 	}
 
 	public void addNewEmployee(Employee employee) {
-		// TODO add new employee logic
+		// TODO insert name check by task
+		if (employee.getSalary() < 22000) {
+			throw new IllegalStateException(" salary can not be lower than 22000");
+		}
+		employeeRepository.save(employee);
 	}
 
 	public void deleteEmployee(Long employee_id) {
